@@ -74,8 +74,9 @@ function illionNames(n,layer,tier=2)
 function illion(n,tier=1)
 {
 	unfloored = n
-	n = Math.floor(n)
 	tier = Math.floor(tier)
+	n = Math.floor(n)
+	console.log(unfloored,n)
 	if (tier == 1) {
 		if (n >= 1_000_000)
 		{
