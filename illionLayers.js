@@ -181,7 +181,7 @@ class IllionLayers
 					}
 					else if (log >= (300+Math.log10(3)) && isFinite(log))
 					{
-						this.result = ((this.sign == -1) ? "-" : "") + illion((log-Math.log10(3))/3,2)
+						this.result = ((this.sign == -1) ? "-" : "") + illion((log-Math.log10(3)),2)
 					}
 					else if (log < 300+Math.log10(3) && log > -(300+Math.log10(3)))
 					{
@@ -189,7 +189,7 @@ class IllionLayers
 					}
 					else if (log <= -(300+Math.log10(3)) && isFinite(log))
 					{
-						this.result = ((this.sign == -1) ? "-" : "") + "1/" + illion(-(log-Math.log10(3))/3,2)
+						this.result = ((this.sign == -1) ? "-" : "") + "1/" + illion(-(log-Math.log10(3)),2)
 					}
 					else if (log == -Infinity)
 					{
