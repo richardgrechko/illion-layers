@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>richard's abbreviations</title>
+    </head>
+    <body>
+        <h1 style="font-size: 2em; color: white">Inspired by <span style="color: #ff0">nbf641</span></h1>
+        <div class="container">
+            <div id="inputContainer">
+                <input type="number" id="mantissaInput" value="1">
+                <input type="number" id="exponentInput" value="33">
+                <input type="number" id="layerInput" value="1">
+            </div>
+            <button onclick="calculate()">Calculate</button>
+            <h1 id="result" style="text-align: center; font-size: 4em; color: white">1.000De</h1>
+            <h1 id="formattedResult" class="result"></h1>
+        </div>
+        <script src="illionLayers.js"></script>
+        <script>
+        function calculate() {
+          mantissa = parseFloat(document.getElementById('mantissaInput').value);
+          exponent = parseFloat(document.getElementById('exponentInput').value);
+          layer = parseFloat(document.getElementById('layerInput').value);
+          if (mantissa < 0) {
+              document.getElementById('result').textContent = new IllionLayers({mantissa, exponent, layer}).result;
+          } else {
+              document.getElementById('result').textContent = new IllionLayers({mantissa: -mantissa, exponent, layer, sign: -1}).result;
+          }
+        }
+        </script>
+    </body>
+</html>
