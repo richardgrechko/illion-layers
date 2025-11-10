@@ -1,0 +1,9 @@
+@font-face {
+	font-family: Lexend;
+	src: url(fonts/Lexend-Regular.ttf);
+}
+html {
+  background-color: black;
+  color: white;
+  font-family: Lexend;
+}
