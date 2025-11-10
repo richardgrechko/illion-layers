@@ -13,7 +13,7 @@
                 <input type="number" id="layerInput" value="1">
             </div>
             <button onclick="calculate()">Calculate</button>
-            <h1 id="result" style="text-align: center; font-size: 4em; color: white">1.000De</h1>
+            <h1 id="result" style="text-align: center; font-size: 4em; color: white">1.00De</h1>
             <h1 id="formattedResult" class="result"></h1>
         </div>
         <script src="illionLayers.js"></script>
@@ -22,7 +22,7 @@
           mantissa = parseFloat(document.getElementById('mantissaInput').value);
           exponent = parseFloat(document.getElementById('exponentInput').value);
           layer = parseFloat(document.getElementById('layerInput').value);
-          if (mantissa < 0) {
+          if (mantissa >= 0) {
               document.getElementById('result').textContent = new IllionLayers({mantissa, exponent, layer}).result;
           } else {
               document.getElementById('result').textContent = new IllionLayers({mantissa: -mantissa, exponent, layer, sign: -1}).result;
