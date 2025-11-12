@@ -37,13 +37,13 @@ function illionNames(n,layer,tier=2)
 	else if (layer >= 100 && tier == 2)
 	{
 		return ((n == 1) ? "" : (abbrev.onesaboveten[n%10] + abbrev.tens[Math.floor(n/10)%10] + abbrev.hundreds[Math.floor(n/100)]))
-			+ "(" + (
+			+ ((n > 1) ? "(" : "") + (
 					((layer%100) > 10 && (layer%100) < 20) ?
 					(abbrev.tier2onesaboveten[Math.floor(layer/10)%10] + "c") :
 					((layer%100) < 10) ?
-					abbrev.tier2ones[Math.floor(layer/10)%10] :
-					(abbrev.tier2onesaboveten[Math.floor(layer/10)%10] + abbrev.tier2tens[Math.floor(Math.floor(layer/10)/10)])
-					) + abbrev.tier2hundreds[Math.floor(layer/100)] + ")"
+					abbrev.tier2ones[layer%10] :
+					(abbrev.tier2onesaboveten[(layer-1)%10] + abbrev.tier2tens[Math.floor(layer/10)])
+					) + abbrev.tier2hundreds[Math.floor(layer/100)] + ((n > 1) ? ")" : "")
 	}
 	else if (layer >= 10 && tier == 2)
 	{
