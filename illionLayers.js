@@ -150,15 +150,15 @@ class IllionLayers
 					}
 					else if (log >= 3)
 					{
-						this.result = ((this.sign == -1) ? "-" : "") + (10**Math.floor(log%3)).toPrecision(3) + illion((log/3)-1)
+						this.result = ((this.sign == -1) ? "-" : "") + (10**(log%3)).toPrecision(3) + illion((log/3)-1)
 					}
 					else if (log > -3)
 					{
-						this.result = ((this.sign == -1) ? "-" : "") + (10**Math.floor(log%3)).toPrecision(3)
+						this.result = ((this.sign == -1) ? "-" : "") + (10**(log%3)).toPrecision(3)
 					}
 					else if (log > -3_000_000_003)
 					{
-						this.result = ((this.sign == -1) ? "-" : "") + "1/" + (10**Math.floor(log%3)).toPrecision(3) + illion((-log/3)-1)
+						this.result = ((this.sign == -1) ? "-" : "") + "1/" + (10**(log%3)).toPrecision(3) + illion((-log/3)-1)
 					}
 					else if (isFinite(log))
 					{
