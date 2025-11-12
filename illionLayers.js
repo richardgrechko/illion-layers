@@ -133,7 +133,7 @@ class IllionLayers
 				if (this.sign == 0) {
 					this.result = "0.000"
 				} else {
-					this.result = new IllionLayers({mantissa: 10**(Math.log10(this.exp)%1),exponent: Math.floor(Math.log10(this.exp)),layer: 1}).result
+					this.result = new IllionLayers({mantissa: 10**(Math.log10(log)%1),exponent: Math.floor(Math.log10(log)),layer: 1}).result
 				}
 				break;
 			case 1:
