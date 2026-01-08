@@ -1,4 +1,4 @@
-abbrev = {
+var abbrev = {
 	ones: ["K", "M", "B", "T", "Qd", "Qn", "Sx", "Sp", "Ot", "No"],
 	onesaboveten: ["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Ot", "No"],
 	tens: ["", "De", "Vg", "Tg", "Qdg", "Qng", "Sxg", "Spg", "Otg", "Nog"],
@@ -200,5 +200,15 @@ class IllionLayers
 			default:
 				this.result = new IllionLayers({mantissa: this.mantissa,exponent: this.exp,layer: 1}).result
 		}
+	}
+}
+var _Y = {
+	value(args) {
+		return new IllionLayers({
+			mantissa: args[0],
+			exp: args[1],
+			layer: args[2],
+			sign: args[3],
+		})
 	}
 }
